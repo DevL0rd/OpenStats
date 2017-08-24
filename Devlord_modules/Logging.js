@@ -1,3 +1,7 @@
+//Authour: DevL0rd
+//GitHub: https://github.com/DevL0rd
+//Last Update: 5/18/2017
+//Version: 0.1.6
 var fs = require('fs');
 
 var NameSpace = "DevlordProject"

@@ -4,11 +4,8 @@
 //Version: 0.1.6
 var fs = require('fs');
 var dirpath = "./"
-function setPath(str){
-	dirpath = str
-}
 function load(str) {
-	var contents = fs.readFileSync(str).toString();
+	var contents = fs.readFileSync(str).toString('utf-8');
 	return JSON.parse(contents)
 }
 function save(str, obj) {
@@ -17,6 +14,5 @@ function save(str, obj) {
 		if(err) throw err;
 	}); 
 }
-exports.setPath = setPath;
 exports.load = load;
 exports.save = save;
