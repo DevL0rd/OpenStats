@@ -37,12 +37,6 @@ if (param != null) {
     //pageselector.value = param;
 }
 localStorage.Group = Group
-if (localStorage.search == null) {
-    localStorage.search = "";
-} else {
-    $("#searchInput").val(localStorage.search);
-    //pageselector.value = localStorage.Page;
-}
 param = getURLParameter('s');
 if (param != null) {
     $("#searchInput").val(param);
