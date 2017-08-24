@@ -873,7 +873,7 @@ function loadItem(item, itemIndex) {
 
     try {
         //Update timestamp at top right of panel
-        $('#Item_Timestamp_' + itemIndex).text(citem.ts)
+        $('#Item_Timestamp_' + itemIndex).text(item.ts)
         //If error message exists
         if (item.error != "") {
             //Show item overlay
@@ -890,7 +890,6 @@ function loadItem(item, itemIndex) {
             //Fade out the error overlay
             $("#Item_Overlay_" + itemIndex).hide("fade")
         }
-		
         //Apply data to viefwpoer with proper method depending on type
         if (item.type == "pie") {
             //Make new gogole pie chart
@@ -1035,11 +1034,12 @@ function loadItem(item, itemIndex) {
             $('#Item_Viewport_' + itemIndex).append(GeneratedTable)
             //sorttable.makeSortable('#Item_Viewport_' + itemIndex);
         } else if (item.type == "iframe" && item.status != "loaded") {
+
             //If iframe is not loaded
             //Clear panel html
             $('#Item_Viewport_' + itemIndex).text("")
             //Apend new html
-            $('#Item_Viewport_' + itemIndex).append("<iframe src='" + item.url + "' width='100%' height='100%'></iframe>")
+            $('#Item_Viewport_' + itemIndex).append("<iframe src='" + item.url + "' width='100%' height='100%' style='border:none'></iframe>")
             //clear error
             item.error = ""
             //set status to loaded
@@ -1211,6 +1211,11 @@ function loadpage(p) {
     for (itemIndex = 0; itemIndex < Groups[Group].pages[p].items.length; itemIndex++) {
         $(".container").append("<div class='item'  onmouseup='setTimeout(hideDelete, 200)' onmousedown='showDelete()' data-ss-colspan='" + Groups[Group].pages[Page].items[itemIndex].width + "' id='Item_" + itemIndex + "'> <button class='btnsettings' onclick='showSettings(" + itemIndex + ")' >⚙</button> <div class='itemtitle'> " + Groups[Group].pages[Page].items[itemIndex].title + "</div><div class='itemtimestamp'id='Item_Timestamp_" + itemIndex + "'>--:--:-- --- --</div><div class='itemviewport' id='Item_Viewport_" + itemIndex + "'> </div>" + "<div class='itemviewportoverlay' id='Item_Overlay_" + itemIndex + "'><center><div id='panelError_" + itemIndex + "' class='panelError'></div></center></div><div id='settingsPanel_" + itemIndex + "' class='settingsPanel'></div></div>");
     }
+	for (var i = 0, len = Groups[Group].pages[p].items.length; i < len; i++) {
+			if (Groups[Group].pages[p].items[i].type == "iframe"){
+				loadItem(Groups[Group].pages[p].items[i], i)
+			}
+		}
     $(".container").show("fade");
     //Shape shift container
         $("#Page select").val(p);
@@ -1795,6 +1800,7 @@ socket.on('updateGroups', function (newGroupList) {
             localStorage.Page = 0
             UpdateUrl()
         }
+		
         ReloadGroupSelectors()
         ReloadPageSelector()
         $('#Group').val(Group)
@@ -1803,7 +1809,7 @@ socket.on('updateGroups', function (newGroupList) {
         //Give delay to load page to give time for groups list to asynchronsouly update on first attempt failure.
         //Why does this happen so intermittently?
         loadpage(Page)
-
+		
     }
 
 
