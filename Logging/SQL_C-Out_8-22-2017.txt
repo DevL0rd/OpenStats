@@ -1,0 +1,17 @@
+
+[8/22/2017 4:13:00 AM] (SQL): Table 'ram' added!
+[8/22/2017 4:13:00 AM] (SQL): Table 'cpu' added!
+[8/22/2017 4:13:00 AM] (SQL): Table 'Command_use' added!
+[8/22/2017 4:13:00 AM] (SQL): Table 'Server_Perf' added!
+[8/22/2017 4:13:00 AM] (SQL): Table 'Command_use_pie' added!
+[8/22/2017 4:13:00 AM] (SQL): Table 'SongRequests' added!
+[8/22/2017 4:13:00 AM] (SQL): Table 'Viewers' added!
+[8/22/2017 4:13:00 AM] (SQL): Table 'Viewers_pie' added!
+[8/22/2017 5:02:20 AM] (SQL): Table 'ram' added!
+[8/22/2017 5:02:20 AM] (SQL): Table 'cpu' added!
+[8/22/2017 5:02:20 AM] (SQL): Table 'Server_Perf' added!
+[8/22/2017 5:02:20 AM] (SQL): Table 'Command_use_pie' added!
+[8/22/2017 5:02:20 AM] (SQL): Table 'SongRequests' added!
+[8/22/2017 5:02:20 AM] (SQL): Table 'Command_use' added!
+[8/22/2017 5:02:20 AM] (SQL): Table 'Viewers' added!
+[8/22/2017 5:02:20 AM] (SQL): Table 'Viewers_pie' added!

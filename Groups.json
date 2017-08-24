@@ -1,1 +1,92 @@
-[{"name":"All Groups","pages":[{"name":"All Panels","items":[{"title":"CPU","type":"pie","width":2,"height":2,"dataSet":"cpu","data":[],"filteredData":[],"ts":"","error":" ","options":{"legend":{"position":"right","alignment":"center"},"colors":["#5bea2c","gray"],"is3D":true}},{"title":"RAM","type":"pie","width":2,"height":2,"dataSet":"ram","data":[],"filteredData":[],"ts":"","error":" ","options":{"legend":{"position":"right","alignment":"center"},"colors":["#ef7b02","gray"],"is3D":true}},{"title":"Server Monitor","type":"combochart","width":3,"height":2,"dataSet":"Server_Perf","data":[],"filteredData":[],"ts":"","error":" ","options":{"animation":{"duration":200,"easing":"out"},"lineWidth":5,"pointSize":8,"seriesType":"lines","colors":["#00840b","#00840b","#00840b","#00840b","#00840b","#00840b","#00840b","#00840b","#ef7b02","#5bea2c"],"vAxes":{"0":{"viewWindowMode":"explicit","viewWindow":{"max":100,"min":0},"format":"###%"},"1":{"viewWindowMode":"explicit","viewWindow":{"max":16000,"min":0},"format":"###### MB"}},"series":{"8":{"type":"lines","targetAxisIndex":1},"9":{"type":"lines","targetAxisIndex":0}},"legend":"none"}}]}]}]
+[{
+    "name": "All Groups",
+    "pages": [{
+        "name": "All Panels",
+        "items": [{
+            "title": "CPU",
+            "type": "pie",
+            "width": 2,
+            "height": 2,
+            "dataSet": "cpu",
+            "data": [],
+            "filteredData": [],
+            "ts": "",
+            "error": " ",
+            "options": {
+                "legend": {
+                    "position": "right",
+                    "alignment": "center"
+                },
+                "colors": ["#5bea2c", "gray"],
+                "is3D": true
+            }
+        }, {
+            "title": "RAM",
+            "type": "pie",
+            "width": 2,
+            "height": 2,
+            "dataSet": "ram",
+            "data": [],
+            "filteredData": [],
+            "ts": "",
+            "error": " ",
+            "options": {
+                "legend": {
+                    "position": "right",
+                    "alignment": "center"
+                },
+                "colors": ["#ef7b02", "gray"],
+                "is3D": true
+            }
+        }, {
+            "title": "Server Monitor",
+            "type": "combochart",
+            "width": 3,
+            "height": 2,
+            "dataSet": "Server_Perf",
+            "data": [],
+            "filteredData": [],
+            "ts": "",
+            "error": " ",
+            "options": {
+                "animation": {
+                    "duration": 200,
+                    "easing": "out"
+                },
+                "lineWidth": 5,
+                "pointSize": 8,
+                "seriesType": "lines",
+                "colors": ["#00840b", "#00840b", "#00840b", "#00840b", "#00840b", "#00840b", "#00840b", "#00840b", "#ef7b02", "#5bea2c"],
+                "vAxes": {
+                    "0": {
+                        "viewWindowMode": "explicit",
+                        "viewWindow": {
+                            "max": 100,
+                            "min": 0
+                        },
+                        "format": "###%"
+                    },
+                    "1": {
+                        "viewWindowMode": "explicit",
+                        "viewWindow": {
+                            "max": 32000,
+                            "min": 0
+                        },
+                        "format": "###### MB"
+                    }
+                },
+                "series": {
+                    "8": {
+                        "type": "lines",
+                        "targetAxisIndex": 1
+                    },
+                    "9": {
+                        "type": "lines",
+                        "targetAxisIndex": 0
+                    }
+                },
+                "legend": "none"
+            }
+        }]
+    }]
+}]

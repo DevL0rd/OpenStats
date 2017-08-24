@@ -1,0 +1,6 @@
+
+[8/16/2017 2:25:58 AM] (Server): File requested (favicon.ico) does not exist!
+[8/16/2017 6:09:25 AM] (Server): File requested (favicon.ico) does not exist!
+[8/16/2017 6:10:09 AM] (Server): File requested (favicon.ico) does not exist!
+[8/16/2017 6:10:09 AM] (Server): File requested (favicon.ico) does not exist!
+[8/16/2017 6:22:45 AM] (Server): File requested (favicon.ico) does not exist!

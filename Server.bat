@@ -2,6 +2,6 @@
 cls
 :restart
 title OpenStats Server.
-node bin\server.js
+node server.js
 pause
 goto restart

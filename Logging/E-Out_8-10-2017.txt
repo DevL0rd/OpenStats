@@ -1,0 +1,20 @@
+
+[8/10/2017 11:26:08 AM] (Server): File requested (favicon.ico) does not exist!
+[8/10/2017 11:55:32 AM] (Server): SyntaxError: Unexpected token } in JSON at position 3153
+[8/10/2017 11:55:44 AM] (Server): SyntaxError: Unexpected token } in JSON at position 3153
+[8/10/2017 11:55:47 AM] (Server): SyntaxError: Unexpected token } in JSON at position 3153
+[8/10/2017 12:19:43 PM] (Server): File requested (js/socket.io.js.m) does not exist!
+[8/10/2017 12:22:38 PM] (Server): File requested (js/socket.io.js.m) does not exist!
+[8/10/2017 12:22:43 PM] (Server): File requested (js/socket.io.js.m) does not exist!
+[8/10/2017 12:24:27 PM] (Server): File requested (js/socket.io.js.m) does not exist!
+[8/10/2017 12:27:29 PM] (Server): File requested (js/socket.io.js.m) does not exist!
+[8/10/2017 12:28:58 PM] (Server): File requested (js/socket.io.js.m) does not exist!
+[8/10/2017 1:15:32 PM] (Server): File requested (js/socket.io.js.m) does not exist!
+[8/10/2017 1:16:00 PM] (Server): File requested (js/socket.io.js.m) does not exist!
+[8/10/2017 1:18:13 PM] (Server): SyntaxError: Unexpected string in JSON at position 4828
+[8/10/2017 1:18:17 PM] (Server): SyntaxError: Unexpected string in JSON at position 4828
+[8/10/2017 1:18:19 PM] (Server): SyntaxError: Unexpected string in JSON at position 4828
+[8/10/2017 1:38:57 PM] (Server): SyntaxError: Unexpected token p in JSON at position 3480
+[8/10/2017 1:55:51 PM] (Server): SyntaxError: Unexpected string in JSON at position 5094
+[8/10/2017 2:03:33 PM] (Server): SyntaxError: Unexpected token : in JSON at position 5516
+[8/10/2017 2:03:37 PM] (Server): SyntaxError: Unexpected token : in JSON at position 5516
