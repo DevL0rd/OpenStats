@@ -1,6 +1,6 @@
 //Authour: DevL0rd
 //GitHub: https://github.com/DevL0rd
-//Last Update: 5/18/2017
+//Last Update: 8/27/2017
 //Version: 0.1.6
 var fs = require('fs');
 
@@ -10,18 +10,22 @@ var consoleLogging = true
 if (!fs.existsSync(LoggingDir)) {
     fs.mkdirSync(LoggingDir);
 }
+
 function setNamespace(str) {
     NameSpace = str
 }
+
 function setConsoleLogging(bool) {
     consoleLogging = bool
 }
+
 function setLoggingDir(str) {
     LoggingDir = str
     if (!fs.existsSync(LoggingDir)) {
         fs.mkdirSync(LoggingDir);
     }
 }
+
 function timeStamp() {
     // Create a date object with the current time
     var now = new Date();
@@ -51,34 +55,41 @@ function timeStamp() {
     // Return the formatted string
     return date.join("/") + " " + time.join(":") + " " + suffix;
 }
+
 function log(str, isError = false, NameSpaceStr = NameSpace) {
     var now = new Date();
     var date = [now.getMonth() + 1, now.getDate(), now.getFullYear()];
     var TodaysDate = date.join("-")
     var formattedString = "[" + timeStamp() + "] (" + NameSpaceStr + "): " + str
-    console.log(formattedString)
+    if (isError) {
+        throw formattedString
+    } else {
+        console.log(formattedString)
+    }
+
+
     var formattedString = "\r\n" + formattedString
     if (consoleLogging) {
         fs.appendFile(LoggingDir + "/" + NameSpaceStr + "_C-Out_" + TodaysDate + ".txt", formattedString, function (err) {
             if (err) {
-                console.log("[" + timeStamp() + "]: " + err)
+                throw "[" + timeStamp() + "]: " + err
             }
         });
         fs.appendFile(LoggingDir + "/" + "C-Out_" + TodaysDate + ".txt", formattedString, function (err) {
             if (err) {
-                console.log("[" + timeStamp() + "]: " + err)
+                throw "[" + timeStamp() + "]: " + err
             }
         });
     }
     if (isError) {
         fs.appendFile(LoggingDir + "/" + "E-Out_" + TodaysDate + ".txt", formattedString, function (err) {
             if (err) {
-                console.log("[" + timeStamp() + "]: " + err)
+                throw "[" + timeStamp() + "]: " + err
             }
         });
         fs.appendFile(LoggingDir + "/" + NameSpaceStr + "_E-Out_" + TodaysDate + ".txt", formattedString, function (err) {
             if (err) {
-                console.log("[" + timeStamp() + "]: " + err)
+                throw "[" + timeStamp() + "]: " + err
             }
         });
     }
